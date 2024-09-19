@@ -1,6 +1,6 @@
 # Problem 
 
-project 1
+Project 1
 
 # Author
 
@@ -8,7 +8,10 @@ Maxim Nelubin 24.Б82-ММ
 
 st132907@student.spbu.ru
 
-# build
-1
+# Build
+
+make
+
 # Launch
-1
+
+./launch
