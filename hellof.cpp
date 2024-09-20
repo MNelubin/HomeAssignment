@@ -3,11 +3,11 @@
 */
 #include "zag.h"
 
-//using namespace problem_1;
 
-void hello()
+
+void problem_1::hello()
 {
-	string f="";
+	std::string f;
 	std::cout<<"Hello, world!"<<std::endl;
 	while (f != "get_out")
 	{

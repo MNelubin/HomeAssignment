@@ -6,10 +6,12 @@
 
 #include <iostream>
 #include <string>
-using namespace std;
 
+namespace problem_1
+{
+	void hello();
+}
 
-void hello();
 
 
 #endif

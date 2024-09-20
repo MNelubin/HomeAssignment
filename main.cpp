@@ -4,6 +4,8 @@
 
 #include "zag.h"
 
+using namespace problem_1;
+
 int main()
 {
 	hello();
