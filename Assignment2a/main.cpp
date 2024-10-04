@@ -39,6 +39,7 @@ int main()
     outf.close();
 
     delete [] buffer;
+    delete [] revbuffer;
 
     return 0;
 }
