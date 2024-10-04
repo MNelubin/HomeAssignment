@@ -1,39 +1,44 @@
-/* Maxim Nelubin st132907@student.spbu.ru
+/* Maxim Nelyubin st132907@student.spbu.ru
 	Assighment 2a
 */
-#include <fstream>
-#include <iostream>
-#include <filesystem>
-#include <string>
+#include "zAssig2a.h"
+
+using namespace problem_2a;
 
 int main()
 {
-    std::string Path="test1.pdf";
+    std::string Path1="test1.pdf";
+    std::string Path2="test2.pdf";
+    
     std::ifstream inf;
-    inf.open(Path,std::ios::binary|std::ios::in);
-    int sz = std::filesystem::file_size(Path);
+    inf.open(Path1,std::ios::binary|std::ios::in);
+
+    int sz = std::filesystem::file_size(Path1);
     std::cout<<sz<<std::endl;
-    int* buffer = new int [sz];
+
+    char* buffer = new char [sz];
+
+    inf.read(buffer,sz);
     
-    //int buffer = 12345;
-    inf.read(&buffer,sz);
+    DataOut(buffer);
     
+    char* revbuffer= new char [sz];
+
     for (int i = 0; i < sz; ++i)
     {
-    	std::cout<<buffer[i];
+    	revbuffer[i]=buffer[sz-i-1];
     }
-    std::cout<<std::endl;
-    std::ofstream outf;
-    
 
-    outf.open(Path,std::ios::binary|std::ios::out);
-    //int d=123;
-    //outf.write((char*)(&d),sizeof(d));
-    outf.write(&buffer,sz);
+    DataOut(revbuffer);
+
+    std::ofstream outf;
+    outf.open(Path2,std::ios::binary|std::ios::out);
+    outf.write(revbuffer,sz);
+
     inf.close();
     outf.close();
-	std::cout<<buffer<<std::endl;
 
     delete [] buffer;
+
     return 0;
 }
