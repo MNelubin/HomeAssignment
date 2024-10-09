@@ -128,6 +128,7 @@ std::string problem_2b::r_polish()
     
     delete s_oper;
 
+    
 
 	return reverse_poland_string;
 }

@@ -5,16 +5,16 @@
 #define ZAG_H
 
 
-
+#include <cstring>
 #include <iostream>
 #include <map>
 #include <string>
 
 namespace problem_2b
 {
+	double solver();
 	std::string r_polish();
 }
-
 
 
 #endif

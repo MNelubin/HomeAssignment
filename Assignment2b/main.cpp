@@ -7,9 +7,6 @@ using namespace problem_2b;
 
 int main()
 {
-    std::string polish = r_polish();
-    char* s_calc = new char [polish.length()];
-    int c_i= -1;
-
+    std::cout<<solver()<<std::endl;
     return 0;
 }
