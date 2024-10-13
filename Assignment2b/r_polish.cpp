@@ -132,5 +132,3 @@ std::string problem_2b::r_polish()
 
 	return reverse_poland_string;
 }
-//1+(2*(5+8)*(3+4*5+9+1))/6
-//125*+8345*+9+1+*6/+
