@@ -4,10 +4,9 @@
 #ifndef ZAG_H
 #define ZAG_H
 
-#include <iostream>
-#include <string>
+#include "inc.h"
 
-
+#include "compozition.h"
 #include "Transformers.h"
 
 

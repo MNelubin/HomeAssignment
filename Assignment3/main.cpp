@@ -6,7 +6,8 @@
 
 int main()
 {
-    Transformers optimus(1,"boss","general",10);
+    Transformers optimus(1,"boss","general",10,180);
     optimus.is_evil();
+    optimus.get_height();
     return 0;
 }
