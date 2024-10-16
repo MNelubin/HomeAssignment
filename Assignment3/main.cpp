@@ -6,8 +6,10 @@
 
 int main()
 {
-    Transformers optimus(1,"boss","general",10,180);
+	Association cool_gun("RPG");
+    Transformers optimus(1,"boss","general",10,180,&cool_gun);
     optimus.is_evil();
     optimus.get_height();
+    optimus.get_gun();
     return 0;
 }

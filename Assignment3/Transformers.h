@@ -6,6 +6,7 @@
 
 #include "inc.h"
 #include "compozition.h"
+#include "Association.h"
 
 class Transformers
 {
@@ -13,9 +14,11 @@ private:
 	bool is_decepticon;
 	int place_in_ranking;
 	std::string formal_name, profession;
-	compozition height;	
+	compozition height;
+	Association* gun;
+
 public:
-	Transformers(bool,std::string,std::string,int,uint);
+	Transformers(bool,std::string,std::string,int,uint,Association*);
 
 	~Transformers();
 
@@ -38,6 +41,16 @@ public:
 	void set_height(uint temp_height);
 
 	uint get_height();
+
+	void set_gun(Association* dif_gun);
+
+	std::string get_gun();
+
+	bool r_1();
+
+	bool r_0();
+
+	bool r_invert(bool y);
 
 };
 

@@ -7,21 +7,19 @@
 
 
 
-Transformers::Transformers(bool good = 0,std::string clicku = "",std::string job="",int place = -1 ,uint t_height = 1 )
+Transformers::Transformers(bool good = 0,std::string clicku = "NULL",std::string job="NULL",int place = -1 ,uint t_height = 1 ,Association* s_gun = nullptr) :gun(s_gun)
 	{
 		is_decepticon = good;
 		place_in_ranking = place;
 		formal_name = clicku;
 		profession=job;
 		height.set_lenght(t_height);
-
 	}
 
 Transformers::~Transformers()
 {
 	std::cout<<"Tr_Destructed"<<std::endl;
 }
-
 
 bool Transformers::is_evil()
 	{
@@ -81,4 +79,26 @@ uint Transformers::get_height()
 		std::cout<<height.get_lenght()<<std::endl;
 
 		return height.get_lenght();
+	}
+void Transformers::set_gun(Association* dif_gun)
+	{
+		gun=dif_gun;
+	}
+std::string Transformers::get_gun()
+	{
+		std::cout<<(*gun).get_tgun()<<std::endl;
+
+		return (*gun).get_tgun();
+	}
+bool Transformers::r_1()
+	{
+		return 1;
+	}
+bool Transformers::r_0()
+	{
+		return 0;
+	}
+bool Transformers::r_invert(bool y)
+	{
+		return !(y);
 	};
