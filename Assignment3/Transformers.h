@@ -18,6 +18,9 @@ private:
 	Association* gun;
 
 public:
+
+	Transformers();
+
 	Transformers(bool,std::string,std::string,int,uint,Association*);
 
 	~Transformers();

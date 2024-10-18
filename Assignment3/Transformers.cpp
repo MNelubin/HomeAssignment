@@ -6,6 +6,16 @@
 
 
 
+Transformers::Transformers()
+{
+	is_decepticon = 0;
+	place_in_ranking = -1;
+	formal_name = "NULL";
+	profession="NULL";
+	height.set_lenght(0);
+	Association p("NULL");
+	gun = &p;
+}
 
 Transformers::Transformers(bool good = 0,std::string clicku = "NULL",std::string job="NULL",int place = -1 ,uint t_height = 1 ,Association* s_gun = nullptr) :gun(s_gun)
 	{

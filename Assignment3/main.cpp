@@ -2,14 +2,14 @@
 	Assighment 3
 */
 
-#include "Transformers.h"
+#include "zAssig3.h"
 
 int main()
 {
 	Association cool_gun("RPG");
-    Transformers optimus(1,"boss","general",10,180,&cool_gun);
-    optimus.is_evil();
-    optimus.get_height();
-    optimus.get_gun();
+    Optimus_Prime first(1,"boss","general",10,180,&cool_gun,10,1);
+    first.is_evil();
+    first.get_gun();
+    
     return 0;
 }
