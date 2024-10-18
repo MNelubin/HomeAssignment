@@ -16,7 +16,7 @@ compozition::compozition(uint height )
 compozition::~compozition()
 	{
 
-	std::cout<<"Co_Destructed"<<std::endl;
+	//std::cout<<"Co_Destructed"<<std::endl;
 	
 	}
 uint compozition::get_lenght()

@@ -25,7 +25,7 @@ public:
 
 	~Transformers();
 
-	bool is_evil();
+	std::string is_evil();
 
 	void set_fraction(bool frac);
 

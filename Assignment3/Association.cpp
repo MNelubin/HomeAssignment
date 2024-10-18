@@ -17,7 +17,7 @@ Association::Association(std::string temp_gun)
 
 Association::~Association()
 	{
-		std::cout<<"As_Destoroyed"<<std::endl;
+		//std::cout<<"As_Destoroyed"<<std::endl;
 	}
 
 std::string Association::get_tgun()
