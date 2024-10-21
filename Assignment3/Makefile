@@ -1,35 +1,55 @@
-PROJECT=go
-CC=g++
-all:$(PROJECT)
-#-c = "compilate"
-#-o = " create file "input name" "
+PROJECT = go
 
-$(PROJECT):main.o compozition.o Transformers.o Association.o Optimus_Prime.o Megatron.o Bamblbee.o
-	$(CC) main.o  compozition.o Association.o Transformers.o Optimus_Prime.o Megatron.o Bamblbee.o -o $(PROJECT)
+LIBPROJECT = $(PROJECT).a
 
-main.o:main.cpp zAssig3.h 
-	$(CC) -c main.cpp -o main.o
-	
-Transformers.o: Transformers.cpp Transformers.h compozition.h Association.h  
-	$(CC) -c Transformers.cpp -o Transformers.o
+TESTPROJECT = test-$(PROJECT)
 
-Compozition.o:compozition.cpp compozition.h 
-	$(CC) -c compozition.cpp -o Compozition.o
+CXX = g++
 
-Association.o:Association.cpp Association.h 
-	$(CC) -c Association.cpp -o Association.o
+A = ar
 
-Optimus_Prime.o:Optimus_Prime.cpp Optimus_Prime.h Transformers.h 
-	$(CC) -c Optimus_Prime.cpp -o Optimus_Prime.o
+AFLAGS = rsv
 
-Megatron.o:Megatron.cpp Megatron.h Transformers.h 
-	$(CC) -c Megatron.cpp -o Megatron.o
+CCXFLAGS = -I. -std=c++17 -Wall -g -fPIC
 
-Bamblbee.o:Bamblbee.cpp Bamblbee.h Transformers.h 
-	$(CC) -c Bamblbee.cpp -o Bamblbee.o
+LDXXFLAGS = $(CCXFLAGS) -L. -l:$(LIBPROJECT)
+
+LDGTESTFLAGS = $(LDXXFLAGS) -lgtest -lgtest_main -lpthread
+
+DEPS=$(wildcard *.h)
+
+OBJ=compozition.o Transformers.o Association.o Optimus_Prime.o Megatron.o Bamblbee.o
+
+TEST-OBJ=test-Transformers.o 
+
+.PHONY: default
+
+default: all;
+
+%.o: %.cpp $(DEPS)
+	$(CXX) -c -o $@ $< $(CXXFLAGS)
+
+$(LIBPROJECT): $(OBJ)
+	$(A) $(AFLAGS) $@ $^
+
+$(PROJECT): main.o $(LIBPROJECT)
+	$(CXX) -o $@ main.o $(LDXXFLAGS)
+
+
+$(TESTPROJECT): $(LIBPROJECT) $(TEST-OBJ)
+	$(CXX) -o $@ $(TEST-OBJ) $(LDGTESTFLAGS)
+
+test: $(TESTPROJECT)
+
+all: $(PROJECT)
+
+.PHONY: clean
+
 clean:
-	rm -rf *.o
+	rm -f *.o
 
-cleanall:
-	rm -rf *.o
-	rm -rf $(PROJECT)
+cleanall: clean
+	rm -f $(PROJECT)
+	rm -f $(LIBPROJECT)
+	rm -f $(TESTPROJECT)
+

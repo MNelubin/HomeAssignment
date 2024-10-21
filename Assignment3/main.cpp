@@ -18,6 +18,7 @@ int main()
     Bamblbee third(0,"Bamblbee","helper",2,700,&n_bad_gun,50,1);
     std::cout<<third.is_evil()<<std::endl;
     std::cout<<third.get_gun()<<std::endl;
-
+    std::cout<<third.r_invert(1)<<std::endl;
+    std::cout<<first.doubeling_jokes()<<std::endl;
     return 0;
 }
