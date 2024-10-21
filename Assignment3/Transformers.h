@@ -4,7 +4,7 @@
 #ifndef ZAG_h_trans
 #define ZAG_h_trans
 
-#include "inc.h"
+#include <string>
 #include "compozition.h"
 #include "Association.h"
 
@@ -21,7 +21,7 @@ public:
 
 	Transformers();
 
-	Transformers(bool,std::string,std::string,int,uint,Association*);
+	Transformers(bool good ,std::string clicku ,std::string job,int place  ,uint t_height  ,Association* s_gun );
 
 	~Transformers();
 

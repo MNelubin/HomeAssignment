@@ -4,13 +4,14 @@
 #ifndef ZAG_H
 #define ZAG_H
 
-#include "inc.h"
+#include <string>
+#include <iostream>
 
 #include "compozition.h"
 #include "Transformers.h"
 #include "Optimus_Prime.h"
 #include "Megatron.h"
-
+#include "Bamblbee.h"
 
 
 #endif

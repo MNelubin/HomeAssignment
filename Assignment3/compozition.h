@@ -4,7 +4,10 @@
 #ifndef ZAG_h_compoz
 #define ZAG_h_compoz
 
-#include "inc.h"
+#include <iostream>
+//for uint
+
+
 
 class compozition
 {

@@ -4,7 +4,7 @@
 #ifndef ZAG_h_Assoc
 #define ZAG_h_Assoc
 
-#include "inc.h"
+#include <string>
 
 class Association
 {

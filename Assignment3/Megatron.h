@@ -13,7 +13,7 @@ private:
     bool is_having_pocket_knife;
 public:
 	Megatron();
-	Megatron(bool,std::string,std::string,int,uint,Association*,uint,bool);
+	Megatron(bool good ,std::string clicku ,std::string job,int place  ,uint t_height  ,Association* s_gun ,uint i_grenades_count,bool i_is_knife_on) ;
 	uint get_num_grenades();
 	void set_num_grenades(uint grenades);
 	bool get_is_knife_on();
