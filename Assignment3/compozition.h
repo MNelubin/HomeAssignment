@@ -12,13 +12,13 @@
 class compozition
 {
 private:
-	uint lenght;
+    uint lenght;
 public:
-	compozition();
-	compozition(uint);
-	~compozition();
-	uint get_lenght();
-	void set_lenght(uint i_lenght);
+    compozition();
+    compozition(uint);
+    ~compozition();
+    uint get_lenght() const;
+    void set_lenght(uint i_lenght);
 };
 
 

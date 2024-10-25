@@ -9,13 +9,13 @@
 class Association
 {
 private:
-	std::string type_gun;
+    std::string type_gun;
 public:
-	Association();
-	Association(std::string);
-	~Association();
-	std::string get_tgun();
-	void set_tgun(std::string);
+    Association();
+    Association(std::string);
+    ~Association();
+    std::string get_tgun() const;
+    void set_tgun(std::string);
 };
 
 
