@@ -64,5 +64,3 @@ TEST(tClassTest, DoubleSpecialization_False)
     tClass<double> tc(0.0);
     EXPECT_FALSE(tc.foo());
 }
-
-// Добавьте еще тесты для проверки возвращения false
