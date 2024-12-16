@@ -13,8 +13,8 @@ class Class1
 public:
     bool bar(int a, std::vector<float>& b);
 
-    int c_i_1();
-    float c_f_2();
-    void c_i_3();
+    int c_1_1();
+    float c_1_2();
+    void c_1_3();
 };
 #endif

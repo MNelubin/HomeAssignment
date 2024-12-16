@@ -12,8 +12,8 @@ class Class2
 public:
     bool bar(int a, std::vector<float>& b);
 
-    int c_i_1();
-    float c_f_2();
-    void c_i_3();
+    int c_2_1();
+    float c_2_2();
+    void c_2_3();
 };
 #endif

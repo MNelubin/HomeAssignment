@@ -8,12 +8,12 @@ bool Class3::bar(int a, std::vector<float>& b)
     return a == -b.size();
 }
 
-int Class3::c_i_1()
+int Class3::c_3_1()
 {
     return 3;
 }
-float Class3::c_f_2()
+float Class3::c_3_2()
 {
     return 4.0f;
 }
-void Class3::c_i_3() {}
+void Class3::c_3_3() {}

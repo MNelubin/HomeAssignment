@@ -11,9 +11,9 @@ class Class3
 public:
     bool bar(int a, std::vector<float>& b);
 
-    int c_i_1();
-    float c_f_2();
-    void c_i_3();
+    int c_3_1();
+    float c_3_2();
+    void c_3_3();
 };
 
 #endif
